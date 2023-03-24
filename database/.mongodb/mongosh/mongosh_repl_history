@@ -1,7 +1,0 @@
-exit
-clear
-db.students.find({name:'zu'})
-db.students.find();
-show tables;
-use studentdb;
-show databases;
