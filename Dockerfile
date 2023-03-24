@@ -5,7 +5,9 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 RUN npm install glob rimraf
-
+# RUN npm install --save @nestjs/passport passport passport-local
+# RUN npm install --save-dev @types/passport-local
+RUN npm i -g @nestjs/cli
 RUN npm install --only=development
 
 COPY . .
@@ -21,6 +23,9 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
+# RUN npm install --save @nestjs/passport passport passport-local
+# RUN npm install --save-dev @types/passport-local
+RUN npm i -g @nestjs/cli
 RUN npm install --only=production
 
 COPY . .
